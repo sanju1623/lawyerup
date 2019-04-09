@@ -18,13 +18,8 @@ router.get('/', function(req, res, next) {
     });
   }
   catch (e) {
-    //console.log(e);
+    console.log(e);
   }
-
-
-
-
-
 });
-
 module.exports = router;
+

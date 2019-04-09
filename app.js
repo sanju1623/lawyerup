@@ -38,4 +38,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.post("/webhook/", function (req, res) {
+  var data = req.body;
+  console.log(data.object);
+});
+
+
 module.exports = app;
