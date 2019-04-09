@@ -40,7 +40,10 @@ app.use(function(err, req, res, next) {
 
 app.post("/webhook/", function (req, res) {
   var data = req.body;
+  const city=req.body.geo-city;
   console.log(data.object);
+  console.log(city);
+  return res.json({displayText:"Sanjay"});
 });
 
 
