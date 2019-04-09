@@ -22,13 +22,5 @@ router.get('/', function(req, res, next) {
   }
 });
 
-router.post('/webhook', function (req, res) {
-  var data = req.body;
-  const city=req.body.geo-city;
-  console.log(data.object);
-  console.log(city);
-  return res.json({displayText:"Sanjay"});
-});
-
 module.exports = router;
 

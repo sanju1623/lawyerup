@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/webhook',webhook);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -37,14 +37,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-// app.post('/webhook', function (req, res) {
-//   var data = req.body;
-//   const city=req.body.geo-city;
-//   console.log(data.object);
-//   console.log(city);
-//   return res.json({displayText:"Sanjay"});
-// });
 
 
 module.exports = app;
